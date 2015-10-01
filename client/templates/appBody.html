@@ -1,0 +1,35 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Salvo</h1>
+
+      {{> loginButtons}}
+
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
+    </header>
+
+    {{> board}}
+
+    {{> ships}}
+
+  </div> 
+</body>
+
+<template name="board">
+  <table class="board" id="board"></table>
+</template>
+
+<template name="ships">
+  <div class="2-ship" name="2-ship" data-ship="2-ship">
+    <table class="board">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</template>
